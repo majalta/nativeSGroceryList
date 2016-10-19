@@ -2,16 +2,29 @@
     "compilerOptions": {
         "outDir": "app",
         "rootDir": "app",
-        "module": "commonjs",
         "target": "es5",
-        "inlineSourceMap": true,
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "isolatedModules": false,
         "experimentalDecorators": true,
-        "removeComments": false,
         "emitDecoratorMetadata": true,
-        "noEmitOnError": true
+        "declaration": false,
+        "noImplicitAny": false,
+        "noImplicitUseStrict": false,
+        "removeComments": true,
+        "noLib": false,
+        "preserveConstEnums": true,
+        "suppressImplicitAnyIndexErrors": true
     },
     "exclude": [
         "node_modules",
+        "typings/browser",
+        "typings/browser.d.ts",
         "platforms"
-    ]
+    ],
+    "compileOnSave": true,
+    "buildOnSave": false,
+    "atom": {
+        "rewriteTsconfig": false
+    }
 }
